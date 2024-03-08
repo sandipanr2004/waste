@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HealthTech Innovations | Home</title>
+
+    <!-- Web Fonts -->
+    <link
+      rel="stylesheet"
+      href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin"
+    />
+
+    <!-- CSS Global Compulsory -->
+    <link
+      rel="stylesheet"
+      href="assets/plugins/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- CSS Header and Footer -->
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="assets/plugins/line-icons-pro/styles.css" />
+    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css" />
+    <link
+      rel="stylesheet"
+      href="assets/plugins/font-awesome/css/font-awesome.min.css"
+    />
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="assets/css/custom.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!--=== Header v1 ===-->
+      <div class="header-v1">
+        <!-- Topbar -->
+        <div class="topbar-v1">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="list-inline top-v1-contacts">
+                  <li>
+                    <i class="fa fa-envelope"></i> Email:
+                    cleanharbors@gmail.com
+                  </li>
+                  <li><i class="fa fa-phone"></i> Contact no : 7878787878</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- End Topbar -->
+
+        <!-- Navbar -->
+        <div class="navbar mega-menu" role="navigation">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="res-container">
+              <button
+                type="button"
+                class="navbar-toggle"
+                data-toggle="collapse"
+                data-target=".navbar-responsive-collapse"
+              >
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <div class="navbar-brand">
+                
+              </div>
+            </div>
+            <!--/end responsive container-->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+              <div class="res-container">
+                <ul class="nav navbar-nav">
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+
+                  <!-- Home  -->
+                  <li class="mega-menu-fullwidth">
+                    <a href="index.html"> HOME </a>
+                  </li>
+                  <!-- End Home-->
+
+                  <!-- About Us -->
+                  <li class="mega-menu-fullwidth">
+                    <a > SOLUTIONS</a>
+                  </li>
+                  <!-- End About us -->
+
+                  <!-- Doctors -->
+                  
+                  <!-- Gallery -->
+                  <li class="mega-menu-fullwidth">
+                    <a > GALLERY </a>
+                  </li>
+                  <!-- End Gallery -->
+
+                  <!-- Blog -->
+                  
+                  <!-- End Blog -->
+
+                  <!-- Contact Us -->
+                  <li class="mega-menu-fullwidth">
+                    <a> CONTACT US </a>
+                  </li>
+                  <!-- End Contact us -->
+
+                  <!-- Registration -->
+                  
+                  <!-- End registration -->
+
+                  <!-- login -->
+                  <li class="mega-menu-fullwidth">
+                    <a> LOGIN </a>
+                  </li>
+                  <!-- End login -->
+
+                  <!-- Appointment -->
+                  
+                  <!-- End Appointment -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Navbar -->
+
+      <!-- Slider -->
+      <div id="slide">
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img
+              src="waste-management-2.jpg"
+              alt="Slider1"
+              style="width: 100%"
+            />
+          </div>
+          <div class="mySlides fade">
+            <img
+              src="pic.jpg"
+              alt="Slider2"
+              style="width: 100%"
+            />
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </div>
+
+      <script>
+        var slideIndex = 0;
+        showSlides();
+        var slides, dots;
+
+        function showSlides() {
+          var i;
+          slides = document.getElementsByClassName("mySlides");
+          dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {
+            slideIndex = 1;
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+          setTimeout(showSlides, 8000); // Change image every 8 seconds
+        }
+
+        function plusSlides(position) {
+          slideIndex += position;
+          if (slideIndex > slides.length) {
+            slideIndex = 1;
+          } else if (slideIndex < 1) {
+            slideIndex = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+
+        function currentSlide(index) {
+          if (index > slides.length) {
+            index = 1;
+          } else if (index < 1) {
+            index = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[index - 1].style.display = "block";
+          dots[index - 1].className += " active";
+        }
+      </script>
+
+      <!-- End of Slider -->
+
+      <!--=== Welcome to HealthTech Innovations===-->
+      <div class="container content-md welcomeSection">
+        <div class="row section1">
+          <div
+            class="col-md-6"
+            style="margin-bottom: 40px"
+            style="border:2px solid black;"
+          >
+            <h2 class="title-v2">
+              Welcome To<span style="color: #72c02c"> CLEAN HARBORS</span>
+            </h2>
+            <p style="text-align: justify; font-size: 14px">
+              Welcome to our Waste Management System! We are dedicated to providing efficient and sustainable solutions for managing waste in your community. Our system offers comprehensive features to streamline waste collection, sorting, recycling, and disposal processes, ensuring minimal environmental impact and maximum resource utilization. From residential to industrial waste management, we prioritize convenience, reliability, and environmental responsibility. Explore our user-friendly platform to schedule pickups, track waste disposal activities, access educational resources on waste reduction and recycling, and engage with our community initiatives aimed at promoting sustainable practices. Together, let's work towards a cleaner, greener future for generations to come. Welcome aboard!
+            </p>
+            
+            <p style="text-align: justify; font-size: 14px">
+              A waste management system for a website is a comprehensive platform designed to effectively manage and mitigate the impact of waste generated by online activities. It encompasses various components and features aimed at reducing, recycling, and properly disposing of waste materials associated with website operations, such as digital assets, content, and data. This system includes functionalities for optimizing resource usage, reducing energy consumption, and implementing eco-friendly practices in website development, hosting, and maintenance processes. It also incorporates tools for monitoring and analyzing waste generation patterns, identifying areas for improvement, and implementing strategies for waste reduction and sustainability. Additionally, the waste management system may include features for educating website users and stakeholders about environmental conservation practices, promoting responsible digital consumption, and fostering a culture of sustainability within the online community. Overall, a waste management system for a website plays a crucial role in promoting environmental stewardship, reducing the carbon footprint of online activities, and contributing to a more sustainable digital ecosystem.
+            </p>
+            <br />
+            <a  class="btn-u btn-brd btn-brd-hover"
+              >Read More</a
+            >
+          </div>
+          <div class="col-md-6 overflow-h">
+            <img
+              style="border-radius: 50px; margin-left: 30px"
+              src="assets/img/bg/1.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <!--=== End About Us ===-->
+
+      <!-- Specialities -->
+      <div class="container" style="margin-top: 50px">
+        <div class="headline-center" style="margin-bottom: 60px">
+          <h2>More About Us</h2>
+          <div class="line"></div>
+          <p>
+            Dry waste management involves the efficient handling and disposal of non-biodegradable waste materials such as plastics, metals, glass, and paper. This waste stream typically originates from households, commercial establishments, and industrial activities. Effective dry waste management strategies focus on segregation, collection, recycling, and proper disposal to minimize environmental impact and promote sustainability. Segregation at the source is a key component, where individuals and organizations separate dry waste from other waste streams to facilitate recycling and processing. Collection systems may include separate bins or designated collection points for dry waste, ensuring proper segregation and transportation to recycling facilities or treatment plants. Recycling initiatives play a vital role in dry waste management, as materials like plastics, glass, and metals can be recycled into new products, reducing the demand for virgin resources and minimizing waste sent to landfills. Additionally, proper disposal methods, such as landfilling or waste-to-energy technologies, are employed for dry waste that cannot be recycled economically. Through comprehensive dry waste management practices, communities and industries can contribute to resource conservation, pollution reduction, and a cleaner, more sustainable environment.
+          </p>
+        </div>
+        <!--end Spciallities-->
+
+        
+        <!--/end row-->
+      </div>
+      <!--/end container-->
+      <!-- End Content Part -->
+
+      <!-- Plans Start -->
+
+      <!-- End PLANS -->
+
+      <!-- Blog part -->
+      
+            
+              <!--/col-md-3-->
+              <!-- End About -->
+
+              <!-- Latest -->
+              <div class="col-md-3" style="margin-bottom: 40px">
+                <div class="posts">
+                  
+                  <ul class="list-unstyled latest-list">
+                    
+                    
+                  </ul>
+                </div>
+              </div>
+              <!--/col-md-3-->
+              <!-- End Latest -->
+
+              <!-- Link List -->
+              <div class="col-md-3" style="margin-bottom: 40px">
+                <div class="headline"><h2>Useful Links</h2></div>
+                <ul class="list-unstyled link-list">
+                  <li>
+                    <a >About us</a
+                    ><i class="fa fa-angle-right"></i>
+                  </li>
+                  <li>
+                    <a >Contact us</a
+                    ><i class="fa fa-angle-right"></i>
+                  </li>
+                  <li>
+                    <a >Book Appointment</a
+                    ><i class="fa fa-angle-right"></i>
+                  </li>
+                </ul>
+              </div>
+              <!--/col-md-3-->
+              <!-- End Link List -->
+
+              <!-- Address -->
+              <div class="col-md-3 map-img" style="margin-bottom: 40px">
+                <div class="headline"><h2>Contact Us</h2></div>
+                <address class="md-margin-bottom-40">
+                  CLEAN HARBORS<br />
+                  Phagwara, IN <br />
+                  Phone: 7878787878 <br />
+                  Email: cleanharbors@gmail.com
+                </address>
+              </div>
+              <!--/col-md-3-->
+              <!-- End Address -->
+            </div>
+          </div>
+        </div>
+        <!--/footer-->
+
+        <div class="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <p>
+                  2024 &copy; All Rights Reserved.
+                  <a href="privacy.html">Privacy Policy</a> |
+                  <a href="terms.html">Terms of Service</a>
+                </p>
+              </div>
+
+              <!-- Social Links -->
+              <div class="col-md-6">
+                <ul class="footer-socials list-inline">
+                  <li>
+                    <a
+                      href="http://www.facebook.com"
+                      class="tooltips"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title=""
+                      data-original-title="Facebook"
+                    >
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.skype.com"
+                      class="tooltips"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title=""
+                      data-original-title="Skype"
+                    >
+                      <i class="fa fa-skype"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.googleplus.com"
+                      class="tooltips"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title=""
+                      data-original-title="Google Plus"
+                    >
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.linkedin.com"
+                      class="tooltips"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title=""
+                      data-original-title="Linkedin"
+                    >
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.Pinterest.com"
+                      class="tooltips"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title=""
+                      data-original-title="Pinterest"
+                    >
+                      <i class="fa fa-pinterest"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.twitter.com"
+                      class="tooltips"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title=""
+                      data-original-title="Twitter"
+                    >
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End Social Links -->
+            </div>
+          </div>
+        </div>
+        <!--/copyright-->
+      </div>
+      <!--=== End Footer ===-->
+    </div>
+    <!--/wrapper-->
+  </body>
+</html>
